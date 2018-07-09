@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Kalc
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         // Calculating variables
         private float sourceNumber = 0;
@@ -22,7 +22,7 @@ namespace Kalc
 
         // Operator constants
         private const int Division = 1;
-        private const int Multiply = 2;
+        private const int Multiplication = 2;
         private const int Minus = 3;
         private const int Plus = 4;
         private const int Percentage = 5;
@@ -33,10 +33,9 @@ namespace Kalc
         // This flag  determines the calculating state
         private bool isCalculating = false;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-            
         } 
 
         public void CheckZero()
@@ -74,7 +73,6 @@ namespace Kalc
         {
             labelResult.Text = resultNumber.ToString();
             sourceNumber = resultNumber;
-
             isCalculating = true;
         }
 
@@ -133,9 +131,9 @@ namespace Kalc
             SetOperator(new Operator { Type = Division, Label = ":" });
         }
 
-        private void buttonMultiply_Click(object sender, EventArgs e)
+        private void buttonMultiplication_Click(object sender, EventArgs e)
         {
-            SetOperator(new Operator { Type = Multiply, Label = "*" });
+            SetOperator(new Operator { Type = Multiplication, Label = "*" });
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
@@ -165,7 +163,7 @@ namespace Kalc
                 case Division:
                     resultNumber = sourceNumber / destinationNumber;
                     break;
-                case Multiply:
+                case Multiplication:
                     resultNumber = sourceNumber * destinationNumber;
                     break;
                 case Minus:
@@ -212,6 +210,11 @@ namespace Kalc
         {
             if (!labelResult.Text.Contains("."))
                 labelResult.Text += ".";
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

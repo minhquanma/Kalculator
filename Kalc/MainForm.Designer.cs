@@ -1,6 +1,6 @@
 ﻿namespace Kalc
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.labelOperation = new System.Windows.Forms.Label();
             this.labelResult = new System.Windows.Forms.Label();
             this.buttonDivision = new System.Windows.Forms.Button();
-            this.buttonMultiply = new System.Windows.Forms.Button();
+            this.buttonMultiplication = new System.Windows.Forms.Button();
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonPlus = new System.Windows.Forms.Button();
             this.buttonNum3 = new System.Windows.Forms.Button();
@@ -111,16 +111,16 @@
             this.buttonDivision.UseVisualStyleBackColor = true;
             this.buttonDivision.Click += new System.EventHandler(this.buttonDivision_Click);
             // 
-            // buttonMultiply
+            // buttonMultiplication
             // 
-            this.buttonMultiply.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMultiply.Location = new System.Drawing.Point(289, 237);
-            this.buttonMultiply.Name = "buttonMultiply";
-            this.buttonMultiply.Size = new System.Drawing.Size(85, 80);
-            this.buttonMultiply.TabIndex = 2;
-            this.buttonMultiply.Text = "x";
-            this.buttonMultiply.UseVisualStyleBackColor = true;
-            this.buttonMultiply.Click += new System.EventHandler(this.buttonMultiply_Click);
+            this.buttonMultiplication.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMultiplication.Location = new System.Drawing.Point(289, 237);
+            this.buttonMultiplication.Name = "buttonMultiplication";
+            this.buttonMultiplication.Size = new System.Drawing.Size(85, 80);
+            this.buttonMultiplication.TabIndex = 2;
+            this.buttonMultiplication.Text = "x";
+            this.buttonMultiplication.UseVisualStyleBackColor = true;
+            this.buttonMultiplication.Click += new System.EventHandler(this.buttonMultiplication_Click);
             // 
             // buttonMinus
             // 
@@ -332,7 +332,7 @@
             this.buttonBackspace.UseVisualStyleBackColor = true;
             this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -352,15 +352,16 @@
             this.Controls.Add(this.buttonNum3);
             this.Controls.Add(this.buttonPlus);
             this.Controls.Add(this.buttonMinus);
-            this.Controls.Add(this.buttonMultiply);
+            this.Controls.Add(this.buttonMultiplication);
             this.Controls.Add(this.buttonBackspace);
             this.Controls.Add(this.buttonSquare);
             this.Controls.Add(this.buttonPercent);
             this.Controls.Add(this.buttonDivision);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Kalculator demo";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -374,7 +375,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Button buttonDivision;
-        private System.Windows.Forms.Button buttonMultiply;
+        private System.Windows.Forms.Button buttonMultiplication;
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonPlus;
         private System.Windows.Forms.Button buttonNum3;
