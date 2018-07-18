@@ -47,12 +47,10 @@ namespace Kalc
             }
         }
 
-        public bool IsFull()
-        {
-            return labelResult.Text.Count() >= MaxInput ? true : false;
+        public bool IsFull() => labelResult.Text.Count() >= MaxInput ? true : false;
 
-        }
-
+        public float GetNumber() => float.Parse(labelResult.Text);
+      
         public void SetNumber(string value)
         {
             CheckZero();
@@ -146,17 +144,16 @@ namespace Kalc
             SetOperator(new Operator { Type = Plus, Label = "+" });
         }
 
-
         private void buttonSquare_Click(object sender, EventArgs e)
         {
-            sourceNumber = float.Parse(labelResult.Text);
+            sourceNumber = GetNumber();
             labelResult.Text = (sourceNumber * sourceNumber).ToString();
         }
 
         private void Calculate()
         {
             if (!isCalculating)
-                destinationNumber = float.Parse(labelResult.Text);
+                destinationNumber = GetNumber();
 
             switch (selectedOperator)
             {
